@@ -25,6 +25,6 @@ class TimeService
     @format.each do |form|
       TIME_FORMATS.keys.include?(form) ? string += TIME_FORMATS[form] + "/" : @errors << form
     end
-    @time_string = Time.now.strftime(string) if success?
+    @time_string = Time.now.strftime(string)
   end
 end
